@@ -11,7 +11,7 @@ layout: default
 	{% if page.previous %}
 		<a class="prev" href="{{ page.previous.url }}">&laquo; {{ page.previous.title | truncatewords:5 }}</a>
 	{% endif %}
-	
+
 	{% if page.next %}
 		<a class="next" href="{{ page.next.url }}">{{ page.next.title | truncatewords:5 }} &raquo;</a>
 	{% endif %}
@@ -30,5 +30,4 @@ layout: default
 		<a href="http://{{ site.disqus.id }}.disqus.com/?url=ref">View the discussion thread.</a>
 	</noscript>
 </div>
-
 
