@@ -1,6 +1,6 @@
 require 'date'
 
-def jekyll(opts = "", path = "../jekyll/bin/")
+def jekyll(opts = "", path = "/home/harry/.gem/ruby/1.8/bin/")
   sh "rm -rf _site"
   sh path + "jekyll " + opts
 end
@@ -45,8 +45,8 @@ task :stable do
   jekyll("--server --auto", "")
 end
 
-desc "Deploy to Dev"
-task :deploy => :"deploy:dev"
+desc "Deploy to Live Site"
+task :deploy => :"deploy:live"
 
 namespace :deploy do
   desc "Deploy to Dev"
@@ -56,14 +56,15 @@ namespace :deploy do
   
   desc "Deploy to Live"
   task :live => :build do
-    rsync "appden.com"
+    rsync "haeg.in"
   end
   
   desc "Deploy to Dev and Live"
   task :all => [:dev, :live]
   
   def rsync(domain)
-    sh "rsync -rtz --delete _site/ scottwkyle@appden.com:~/#{domain}/"
+	sh "chmod a+rx -R _site"
+    sh "rsync -rtpz --delete _site/ hjmills@haeg.in:~/#{domain}"
   end
 end
 

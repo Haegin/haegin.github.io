@@ -3,7 +3,6 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
 	<title>{{ site.title }}</title>
 	<subtitle>{{ site.description }}</subtitle>
 	<link href="{{ site.url }}{{ site.feed }}" rel="self" type="application/atom+xml" />
@@ -12,6 +11,7 @@ layout: nil
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<author>
 		<name>{{ site.author.name }}</name>
+		<email>{{ site.author.email }}</email>
 	</author>
 
 	{% for post in site.posts limit:10 %}
@@ -23,5 +23,4 @@ layout: nil
 			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}
- 
 </feed>

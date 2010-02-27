@@ -1,60 +1,64 @@
 pygments:       true
 permalink:      /:categories/:title/
-paginate:       5
+paginate:       13
+markdown:       rdiscount
 
 exclude:
     - README.md
+      Rakefile
 
-title:          AppDen
-url:            http://appden.com
+title:          Haeg.in
+url:            http://haeg.in
 feed:           /atom.xml
-description:    "Advanced JavaScript techniques, tips on avoiding those nasty CSS bugs, and musings on technological progress."
-comment:        Isn't it ironic there are no apps?
+description:    "What I make of it"
+comment:        As this is a comment it is unreadable to the general populance
 
 author:
-    name:       Scott Kyle
-    email:      scott@appden.com
-    twitter:    appden
-    
+    name:       Harry Mills
+    email:      harry-at-dotin-after-haeg
+    twitter:    Haegin
+
 about: >
-    Hi, I'm Scott Kyle, a <a href="http://mootools.net">MooTools</a> developer
-    and Apple addict. You can follow me on <a href="http://twitter.com/appden">Twitter</a>,
-    fork me on <a href="http://github.com/appden">GitHub</a>, and check out some of my work
-    on my <a href="/portfolio/">portfolio</a>.
-    
+    Haegin has yet to write an about section for his site but when he does it may or may
+    not be in the third person.
+
 disqus:
-    id:         appden
+    id:         haegin
 
 nav:
     - name:     Blog
       url:      /
-    
-    - name:     Portfolio
-      url:      /portfolio/
-    
+
+#    - name:     Gallery
+#      url:      /gallery/
+
     - name:     About
       url:      /about/
       subnav:
         - name: Contact
-          url:  mailto:scott-at-dotcom-after-appden
-    
+          url:  mailto:harry@haeg.in
+
 
 footer:
-    - verb:     Thinking
-      action:   How do people keep up with blogging?
+    - verb:     Watching
+      action:   "Too much TV. Currently I'm following Chuck, Castle and The Big Bang Theory and catching up on House and How I Met Your Mother."
 
-    - verb:     Listening
-      action:   Sexy Bitch Radio on Pandora
-      
+    - verb:     Developing
+      action:   Website for the <a href='http://umoyoorphanproject.org'>Umoyo Orphan Project</a>.
+
+    - verb:     Reading
+      action:   Gormenghast by Mervyn Peake.
+
 copyright:
     - Design by <a href="http://ipsleung.com">Iris Leung</a>
     - "&copy; Copyright 2009, AppDen. All Rights Reserved."
-      
+
 css:
-    - /lib/appden.css
-    - /lib/syntax.css
-    
+    - /css/style.css
+    - /css/layout.css
+    - /css/syntax.css
+
 js:
     - http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js
     - /lib/mootools-more.js
-    - /lib/appden.js
+    - /lib/site.js
