@@ -7,8 +7,6 @@
         {% endif %}
     </h2>
 
-    <div class="entry-date">{{ post.date | date:'%b <div>%d</div> %Y' | replace:'>0','>' }}</div>
-
     <div class="entry-contents">
         {% if detail %}
             {{ content }}
@@ -31,4 +29,6 @@
             {% endunless %}
         </p>
     </div>
+    
+    <div class="entry-date">{{ post.date | date:'%b <div>%d</div> %Y' | replace:'>0','>' }}</div>
 </div>

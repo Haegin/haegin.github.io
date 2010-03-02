@@ -1,16 +1,19 @@
 <ul id="nav">
 	{% for item in site.nav %}
-		<li>
-			<a{% if item.url %} href="{{ item.url }}"{% endif %}>{{ item.name }}</a>
-			{% if item.subnav %}
-				<ul>
-					{% for item in item.subnav %}
-						<li>
-							<a{% if item.url %} href="{{ item.url }}"{% endif %}>{{ item.name }}</a>
-						</li>
-					{% endfor %}
-				</ul>
-			{% endif %}
-		</li>
+    <li>
+        <a{% if item.url %} href="{{ item.url }}"{% endif %}>{{ item.name }}</a>
+        {% if item.subnav %}
+        <ul>
+            {% for item in item.subnav %}
+            <li>
+                <a{% if item.url %} href="{{ item.url }}"{% endif %}>{{ item.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+    <li>
+        <a href="{{ site.feed }}" id="subscribe">Subscribe</a>
+    </li>
 	{% endfor %}
 </ul>

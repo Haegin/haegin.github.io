@@ -1,0 +1,119 @@
+/*
+ * Author: Harry Mills
+ * Goal: Fixed design using a grid system with 12 columns
+ * The columns will be 70px wide with a 10px gutter each to give a total width of 960px - this is designed to fit on a 1024x768 screen.
+ * Additionally the text will all be set in multiples of baseline_size as a baseline grid (http://www.alistapart.com/articles/settingtypeontheweb)
+ *
+ */
+
+/* Baseline Grid */
+
+@baseline_size: 18px;
+@base_text_height: 12px;
+
+.baseline (@line-height: 12px) {
+	margin-bottom: baseline_size;
+	line-height: @line-height;
+}
+
+p {
+	margin-bottom: baseline_size;
+}
+
+h1 {
+	font-size: baseline_size * 2;
+	.baseline(36px);
+}
+
+h2 {
+	font-size: baseline_size;
+	.baseline;
+}
+
+h3 {
+	font-size: base_text_height;
+	.baseline;
+}
+
+ul, ol {
+	margin-bottom: 18px;
+}
+
+li ul, li ol {
+    margin-bottom: 0;
+}
+
+.left {
+	float: left;
+	margin: 0 18px 18px 0;
+}
+
+.right {
+	float: right;
+	margin: 0 0 18px 18px;
+}
+
+
+/* Horizontal Grid for layout */
+
+@column_width: 70px;
+@gutter_width: 10px;
+@total_width:  80px;
+
+.span (@x: 1) {
+    float: left;
+    margin-right: @gutter_width;
+    width: @total_width * @x - @gutter_width;
+}
+
+.last {
+    margin-right:  0px;
+    padding-right: 0px;
+}
+
+.append (@x: 1) {
+    padding-right: @total_width * @x - @gutter_width;
+}
+
+.prepend (@x: 1) {
+    padding-left: @total_width * @x;
+}
+
+#container {
+    margin: auto;
+    width: @total_width * 12 - @gutter_width; // 950 to fit in 1024x768 with browser chrome.
+    background-image: url('../images/grid.png');
+}
+
+#header {
+    .span(10);
+    .prepend(2);
+    .last;
+}
+
+#sidebar {
+    .span(2);
+}
+
+#content {
+    .span(7);
+}
+
+.entry h2 {
+    .span(7);
+    .last;
+}
+
+.entry-footer {
+    display: none;
+}
+
+.entry-contents {
+    .span(6);
+}
+
+.entry-date {
+    .span(1);
+    .last;
+}
+

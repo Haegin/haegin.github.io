@@ -32,17 +32,22 @@ task :post do
 end
 
 desc "Build site using Jekyll"
-task :build do
+task :build => :lessc do
   jekyll
 end
 
 desc "Serve on Localhost with port 4000"
-task :default do
+task :default => :lessc do
   jekyll("--server --auto")
 end
 
 task :stable do
   jekyll("--server --auto", "")
+end
+
+desc "Compile all the css files using less css"
+task :lessc do
+  sh "lessc css/*.less"
 end
 
 desc "Deploy to Live Site"

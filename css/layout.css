@@ -1,0 +1,74 @@
+p { margin-bottom: baseline_size; }
+h1 {
+  font-size: baseline_size * 2;
+  margin-bottom: baseline_size;
+  line-height: 36px;
+}
+h2 {
+  font-size: baseline_size;
+  margin-bottom: baseline_size;
+  line-height: 12px;
+}
+h3 {
+  font-size: base_text_height;
+  margin-bottom: baseline_size;
+  line-height: 12px;
+}
+ul, ol { margin-bottom: 18px; }
+li ul { margin-bottom: 0; }
+li ol { margin-bottom: 0; }
+.left {
+  float: left;
+  margin: 0 18px 18px 0;
+}
+.right {
+  float: right;
+  margin: 0 0 18px 18px;
+}
+.last {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+#container {
+  margin: auto;
+  width: 950px;
+  background-image: url('../images/grid.png');
+}
+#header {
+  float: left;
+  margin-right: 10px;
+  width: 790px;
+  padding-left: 160px;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+#sidebar {
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+}
+#content {
+  float: left;
+  margin-right: 10px;
+  width: 550px;
+}
+.entry h2 {
+  float: left;
+  margin-right: 10px;
+  width: 550px;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.entry-footer { display: none; }
+.entry-contents {
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+.entry-date {
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+  margin-right: 0px;
+  padding-right: 0px;
+}
