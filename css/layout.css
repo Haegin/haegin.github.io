@@ -1,29 +1,33 @@
-p { margin-bottom: baseline_size; }
+body {
+  font-size: 16px;
+  line-height: 24px;
+}
+p { margin-bottom: 24px; }
 h1 {
-  font-size: baseline_size * 2;
-  margin-bottom: baseline_size;
-  line-height: 36px;
+  font-size: 48px;
+  margin-bottom: 24px;
+  line-height: 72px;
 }
 h2 {
-  font-size: baseline_size;
-  margin-bottom: baseline_size;
-  line-height: 12px;
+  font-size: 24px;
+  margin-bottom: 24px;
+  line-height: 24px;
 }
 h3 {
-  font-size: base_text_height;
-  margin-bottom: baseline_size;
-  line-height: 12px;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 24px;
 }
-ul, ol { margin-bottom: 18px; }
+ul, ol { margin-bottom: 24px; }
 li ul { margin-bottom: 0; }
 li ol { margin-bottom: 0; }
 .left {
   float: left;
-  margin: 0 18px 18px 0;
+  margin: 0 24px 24px 0;
 }
 .right {
   float: right;
-  margin: 0 0 18px 18px;
+  margin: 0 0 24px 24px;
 }
 .last {
   margin-right: 0px;
@@ -32,7 +36,8 @@ li ol { margin-bottom: 0; }
 #container {
   margin: auto;
   width: 950px;
-  background-image: url('../images/grid.png');
+  min-height: 100%;
+  overflow: auto;
 }
 #header {
   float: left;

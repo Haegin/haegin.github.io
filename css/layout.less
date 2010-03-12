@@ -8,35 +8,40 @@
 
 /* Baseline Grid */
 
-@baseline_size: 18px;
-@base_text_height: 12px;
+@baseline_size: 24px;
+@base_text_height: 16px;
 
-.baseline (@line-height: 12px) {
-	margin-bottom: baseline_size;
-	line-height: @line-height;
+.baseline (@line-height: @baseline_size) {
+	margin-bottom:  @baseline_size;
+	line-height:    @line-height;
+}
+
+body {
+    font-size:      @base_text_height;
+    line-height:    @baseline_size;
 }
 
 p {
-	margin-bottom: baseline_size;
+	margin-bottom:  @baseline_size;
 }
 
 h1 {
-	font-size: baseline_size * 2;
-	.baseline(36px);
+	font-size:      @baseline_size * 2;
+	.baseline(@baseline_size * 3);
 }
 
 h2 {
-	font-size: baseline_size;
+	font-size:      @baseline_size;
 	.baseline;
 }
 
 h3 {
-	font-size: base_text_height;
+	font-size:      @base_text_height;
 	.baseline;
 }
 
 ul, ol {
-	margin-bottom: 18px;
+	margin-bottom: @baseline_size;
 }
 
 li ul, li ol {
@@ -45,12 +50,12 @@ li ul, li ol {
 
 .left {
 	float: left;
-	margin: 0 18px 18px 0;
+	margin: 0 @baseline_size @baseline_size 0;
 }
 
 .right {
 	float: right;
-	margin: 0 0 18px 18px;
+	margin: 0 0 @baseline_size @baseline_size;
 }
 
 
@@ -82,7 +87,8 @@ li ul, li ol {
 #container {
     margin: auto;
     width: @total_width * 12 - @gutter_width; // 950 to fit in 1024x768 with browser chrome.
-    background-image: url('../images/grid.png');
+    min-height: 100%;
+    overflow: auto;
 }
 
 #header {

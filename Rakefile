@@ -47,7 +47,9 @@ end
 
 desc "Compile all the css files using less css"
 task :lessc do
-  sh "lessc css/*.less"
+    FileList['css/*.less'].each do |lessfile|
+        sh "lessc #{lessfile} --verbose"
+    end
 end
 
 desc "Deploy to Live Site"

@@ -1,74 +1,48 @@
-p { margin-bottom: baseline_size; }
-h1 {
-  font-size: baseline_size * 2;
-  margin-bottom: baseline_size;
-  line-height: 36px;
+@font-face {
+  font-family: Diavlo-Black;
+  src: url("./diavlo/Diavlo_BLACK_II_37.otf");
 }
-h2 {
-  font-size: baseline_size;
-  margin-bottom: baseline_size;
-  line-height: 12px;
+@font-face {
+  font-family: Diavlo-Medium;
+  src: url("./diavlo/Diavlo_MEDIUM_II_37.otf");
 }
-h3 {
-  font-size: base_text_height;
-  margin-bottom: baseline_size;
-  line-height: 12px;
+@font-face {
+  font-family: Fontin-Sans-Regular;
+  src: url("./fontin/Fontin_Sans_R_45b.otf");
 }
-ul, ol { margin-bottom: 18px; }
-li ul { margin-bottom: 0; }
-li ol { margin-bottom: 0; }
-.left {
-  float: left;
-  margin: 0 18px 18px 0;
+@font-face {
+  font-family: Titillium;
+  src: url('./titillium/TitilliumText20L.otf');
 }
-.right {
-  float: right;
-  margin: 0 0 18px 18px;
-}
-.last {
-  margin-right: 0px;
-  padding-right: 0px;
+body {
+  font-family: Titillium, "Gill Sans", Helvetica, Tahoma, sans-serif;
+  color: black;
+  background-color: #89bad9;
 }
 #container {
-  margin: auto;
-  width: 950px;
-  background-image: url('../images/grid.png');
+  border-left: 1px solid #030140;
+  border-right: 1px solid #030140;
+  background-color: white;
 }
-#header {
-  float: left;
-  margin-right: 10px;
-  width: 790px;
-  padding-left: 160px;
-  margin-right: 0px;
-  padding-right: 0px;
+h1 a { text-decoration: none; }
+h2 a { text-decoration: none; }
+h1 a { color: #3462bf; }
+h2 a { color: #030140; }
+h3 a { color: #030140; }
+h1, h2, h3 { font-family: Diavlo-Black; }
+ul#nav {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-family: Diavlo-Medium;
+  background-color: #88a61b;
 }
-#sidebar {
-  float: left;
-  margin-right: 10px;
-  width: 150px;
+ul#nav li { border-top: 0.5px solid #738c16; }
+ul#nav li:first-child { border-top: 0; }
+ul#nav li a {
+  padding-left: 18px;
+  text-decoration: none;
+  color: #030140;
+  width: 100%;
 }
-#content {
-  float: left;
-  margin-right: 10px;
-  width: 550px;
-}
-.entry h2 {
-  float: left;
-  margin-right: 10px;
-  width: 550px;
-  margin-right: 0px;
-  padding-right: 0px;
-}
-.entry-footer { display: none; }
-.entry-contents {
-  float: left;
-  margin-right: 10px;
-  width: 470px;
-}
-.entry-date {
-  float: left;
-  margin-right: 10px;
-  width: 70px;
-  margin-right: 0px;
-  padding-right: 0px;
-}
+ul#nav li:hover { background-color: #738c16; }

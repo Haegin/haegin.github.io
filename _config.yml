@@ -34,10 +34,6 @@ nav:
 
     - name:     About
       url:      /about/
-      subnav:
-        - name: Contact
-          url:  mailto:harry@haeg.in
-
 
 footer:
     - verb:     Watching
@@ -54,8 +50,9 @@ copyright:
     - "&copy; Copyright 2009, AppDen. All Rights Reserved."
 
 css:
-    - /css/style.css
+    - /css/reset.css
     - /css/layout.css
+    - /css/style.css
     - /css/syntax.css
 
 js:

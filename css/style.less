@@ -3,20 +3,84 @@
  * Goal: Defines visual styling for the site.
  */
 
-@main-color: #00ff00;
-@secondary-color: #0000ff;
+@primary_color:     #3462BF;
+@secondary_color:   #030140;
+@background_color:  #89BAD9;
+@link_color:        #88A61B;
+@visited_color:     #738C16;
+
+@font-face {
+    font-family: Diavlo-Black;
+    src: url("./diavlo/Diavlo_BLACK_II_37.otf");
+}
+
+@font-face {
+    font-family: Diavlo-Medium;
+    src: url("./diavlo/Diavlo_MEDIUM_II_37.otf");
+}
+
+@font-face {
+    font-family: Fontin-Sans-Regular;
+    src: url("./fontin/Fontin_Sans_R_45b.otf");
+}
+
+@font-face {
+    font-family: Titillium;
+    src: url('./titillium/TitilliumText20L.otf');
+}
 
 body {
-    font-family: "Gill Sans", Helvetica, Tahoma, sans-serif;
+    font-family: Titillium, "Gill Sans", Helvetica, Tahoma, sans-serif;
     color: black;
+    background-color: @background_color;
 }
 
-h1, h1 a {
-    color: @main-color;
+// Doesn't work due to the floats taking the content out of container
+#container {
+    border-left: 1px solid @secondary_color;
+    border-right: 1px solid @secondary_color;
+    background-color: white;
 }
 
-#nav ul {
+h1 a, h2 a {
+    text-decoration: none;
+}
+
+h1 a {
+    color: @primary_color;
+}
+
+h2 a, h3 a {
+    color: @secondary_color;
+}
+
+h1, h2, h3 {
+    font-family: Diavlo-Black;
+}
+
+ul#nav {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
+    font-family: Diavlo-Medium;
+    background-color: @link_color;
+}
+
+ul#nav li {
+    border-top: 0.5px solid @visited_color;
+}
+
+ul#nav li:first-child {
+    border-top: 0;
+}
+
+ul#nav li a {
+    padding-left: 18px;
+    text-decoration: none;
+    color: @secondary_color;
+    width: 100%;
+}
+
+ul#nav li:hover {
+    background-color: @visited_color;
 }
