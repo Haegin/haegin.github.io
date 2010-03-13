@@ -48,7 +48,7 @@ li ul, li ol {
     margin-bottom: 0;
 }
 
-ul#nav li {
+ul#nav li a {
     padding-top: 11px;
     padding-bottom: 12px;
     font-size: 18px;
@@ -111,6 +111,15 @@ ul#nav li {
 #sidebar {
     .span(2);
     .append(1);
+}
+
+ul#nav {
+    .span(2, 1);
+}
+
+ul#nav li {
+    width: @total_width * 2 - @gutter_width - 18;
+    padding-left: 18px;
 }
 
 #content {
