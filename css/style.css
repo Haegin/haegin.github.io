@@ -51,13 +51,14 @@ ul#nav {
   border-top: 1px solid #738c16;
   border-bottom: 1px solid #738c16;
 }
-ul#nav li { border-top: 0.5px solid #738c16; }
+ul#nav li { border-top: 1px solid #738c16; }
 ul#nav li:first-child { border-top: 0; }
 ul#nav li a {
   padding-left: 18px;
   text-decoration: none;
   color: #030140;
   width: 100%;
+  display: block;
 }
 ul#nav li:hover { background-color: #738c16; }
 ul#nav li:last-child:hover {

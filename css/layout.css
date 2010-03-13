@@ -21,6 +21,11 @@ h3 {
 ul, ol { margin-bottom: 24px; }
 li ul { margin-bottom: 0; }
 li ol { margin-bottom: 0; }
+ul#nav li {
+  padding-top: 11px;
+  padding-bottom: 12px;
+  font-size: 18px;
+}
 .left {
   float: left;
   margin: 0 24px 24px 0;

@@ -37,8 +37,13 @@ task :build => :lessc do
 end
 
 desc "Serve on Localhost with port 4000"
-task :default => :lessc do
-  jekyll("--server --auto")
+task :default do
+    FileList['css/*.less'].each do |lessfile|
+        #p = Process.fork { system("lessc #{lessfile} --verbose &") }
+        #Process.detach(p)
+        sh "lessc -w #{lessfile} &"
+    end
+    jekyll("--server --auto")
 end
 
 task :stable do
@@ -49,6 +54,7 @@ desc "Compile all the css files using less css"
 task :lessc do
     FileList['css/*.less'].each do |lessfile|
         sh "lessc #{lessfile} --verbose"
+        Process.detach(p)
     end
 end
 
