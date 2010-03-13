@@ -18,6 +18,9 @@ body {
   font-family: Titillium, "Gill Sans", Helvetica, Tahoma, sans-serif;
   color: black;
   background-color: #89bad9;
+  background-image: -moz-linear-gradient(top, #030140, #89bad9);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#030140), to(#89bad9));
+  background-attachment: fixed;
 }
 #container {
   border-left: 1px solid #030140;
@@ -36,6 +39,17 @@ ul#nav {
   padding-left: 0;
   font-family: Diavlo-Medium;
   background-color: #88a61b;
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-right: 1px solid #738c16;
+  border-top: 1px solid #738c16;
+  border-bottom: 1px solid #738c16;
 }
 ul#nav li { border-top: 0.5px solid #738c16; }
 ul#nav li:first-child { border-top: 0; }
@@ -46,3 +60,44 @@ ul#nav li a {
   width: 100%;
 }
 ul#nav li:hover { background-color: #738c16; }
+ul#nav li:last-child:hover {
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 10px;
+}
+ul#nav li:first-child:hover {
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+}
+.entry-date {
+  background-color: #89bad9;
+  border: 1px solid #030140;
+  color: #030140;
+  padding-left: 4px;
+  padding-right: 4px;
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 0px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Diavlo;
+  -moz-box-shadow: 5px 5px 5px 0px #888888;
+  -webkit-box-shadow: 5px 5px 5px #888888;
+}
+.entry-date div { font-weight: bolder; }

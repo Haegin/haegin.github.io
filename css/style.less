@@ -8,6 +8,7 @@
 @background_color:  #89BAD9;
 @link_color:        #88A61B;
 @visited_color:     #738C16;
+@shadow_color:      #888888;
 
 @font-face {
     font-family: Diavlo-Black;
@@ -29,13 +30,35 @@
     src: url('./titillium/TitilliumText20L.otf');
 }
 
+.rounded-corners (@tl: 5px, @tr: 5px, @bl: 5px, @br: 5px) {
+    -moz-border-radius-topleft: @tl;
+    -moz-border-radius-topright: @tr;
+    -moz-border-radius-bottomleft: @bl;
+    -moz-border-radius-bottomright: @br;
+    -webkit-border-top-left-radius: @tl;
+    -webkit-border-top-right-radius: @tr;
+    -webkit-border-bottom-left-radius: @bl;
+    -webkit-border-bottom-right-radius: @br;
+}
+
+.box-shadow (@left: 5px, @down: 5px, @blur: 5px, @spread: 0px) {
+    -moz-box-shadow: @left @down @blur @spread @shadow_color;
+    -webkit-box-shadow: @left @down @blur @shadow_color;
+}
+
 body {
     font-family: Titillium, "Gill Sans", Helvetica, Tahoma, sans-serif;
     color: black;
     background-color: @background_color;
+    // Firefox has some really cool gradient stuff but webkit doesn't so we're stuck with boring linear stuff.
+    //background-image: -moz-repeating-linear-gradient(top left -45deg, @secondary_color 1px, @background_color 5px, @secondary_color 1px);
+    //background-image: -moz-radial-gradient(circle farthest-side, @secondary_color, @background_color);
+    background-image: -moz-linear-gradient(top, @secondary_color, @background_color);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@secondary_color), to(@background_color));
+    background-attachment: fixed;
 }
 
-// Doesn't work due to the floats taking the content out of container
+// don't forget the clearing fix to ensure the background works.
 #container {
     border-left: 1px solid @secondary_color;
     border-right: 1px solid @secondary_color;
@@ -64,6 +87,10 @@ ul#nav {
     padding-left: 0;
     font-family: Diavlo-Medium;
     background-color: @link_color;
+    .rounded-corners(0px, 10px, 0px, 10px);
+    border-right: 1px solid @visited_color;
+    border-top: 1px solid @visited_color;
+    border-bottom: 1px solid @visited_color;
 }
 
 ul#nav li {
@@ -84,3 +111,31 @@ ul#nav li a {
 ul#nav li:hover {
     background-color: @visited_color;
 }
+
+ul#nav li:last-child:hover {
+    .rounded-corners(0px, 0px, 0px, 10px);
+}
+
+ul#nav li:first-child:hover {
+    .rounded-corners(0px, 10px, 0px, 0px);
+}
+
+/* Date Panel */
+.entry-date {
+    background-color: @background_color;
+    border: 1px solid @secondary_color;
+    color: @secondary_color;
+    padding-left: 4px;
+    padding-right: 4px;
+    .rounded-corners(0px, 10px, 10px, 0px);
+    text-align: center;
+    font-weight: bold;
+    font-family: Diavlo;
+    .box-shadow();
+}
+
+.entry-date div {
+    font-weight: bolder;
+}
+
+

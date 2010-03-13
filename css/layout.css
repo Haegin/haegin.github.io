@@ -29,6 +29,11 @@ li ol { margin-bottom: 0; }
   float: right;
   margin: 0 0 24px 24px;
 }
+.entry-date div {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
 .last {
   margin-right: 0px;
   padding-right: 0px;
@@ -43,7 +48,7 @@ li ol { margin-bottom: 0; }
   float: left;
   margin-right: 10px;
   width: 790px;
-  padding-left: 160px;
+  padding-left: 150px;
   margin-right: 0px;
   padding-right: 0px;
 }
@@ -51,6 +56,7 @@ li ol { margin-bottom: 0; }
   float: left;
   margin-right: 10px;
   width: 150px;
+  padding-right: 70px;
 }
 #content {
   float: left;
@@ -73,7 +79,7 @@ li ol { margin-bottom: 0; }
 .entry-date {
   float: left;
   margin-right: 10px;
-  width: 70px;
+  width: 60px;
   margin-right: 0px;
   padding-right: 0px;
 }

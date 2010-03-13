@@ -58,6 +58,11 @@ li ul, li ol {
 	margin: 0 0 @baseline_size @baseline_size;
 }
 
+.entry-date div {
+    font-size:      @baseline_size;
+    line-height:    @baseline_size;
+    margin-bottom:  0px;
+}
 
 /* Horizontal Grid for layout */
 
@@ -65,10 +70,10 @@ li ul, li ol {
 @gutter_width: 10px;
 @total_width:  80px;
 
-.span (@x: 1) {
+.span (@columns: 1, @border-and-padding: 0) {
     float: left;
     margin-right: @gutter_width;
-    width: @total_width * @x - @gutter_width;
+    width: @total_width * @columns - @border-and-padding - @gutter_width;
 }
 
 .last {
@@ -81,7 +86,7 @@ li ul, li ol {
 }
 
 .prepend (@x: 1) {
-    padding-left: @total_width * @x;
+    padding-left: @total_width * @x - @gutter_width;
 }
 
 #container {
@@ -99,6 +104,7 @@ li ul, li ol {
 
 #sidebar {
     .span(2);
+    .append(1);
 }
 
 #content {
@@ -119,7 +125,6 @@ li ul, li ol {
 }
 
 .entry-date {
-    .span(1);
+    .span(1, 10);
     .last;
 }
-
