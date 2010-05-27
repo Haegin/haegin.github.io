@@ -117,13 +117,14 @@ ul#nav {
     .span(2, 1);
 }
 
-ul#nav li {
+ul#nav li a {
     width: @total_width * 2 - @gutter_width - 18;
     padding-left: 18px;
 }
 
 #content {
     .span(7);
+    padding-bottom: 20px;
 }
 
 .entry h2 {
@@ -142,4 +143,27 @@ ul#nav li {
 .entry-date {
     .span(1, 10);
     .last;
+}
+
+/* Code snippits */
+
+/* Browser specific (not valid) styles to make preformatted text wrap */
+.pre-wrap {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+pre {
+    .pre-wrap;
+    margin-bottom: @baseline_size;
+    font-family: Terminus, monospace;
+    font-size: 12px;
+    color: white;
+    background-color: #333;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-left: 5px solid #999;
 }

@@ -68,7 +68,7 @@ ul#nav {
   margin-right: 10px;
   width: 149px;
 }
-ul#nav li {
+ul#nav li a {
   width: 132px;
   padding-left: 18px;
 }
@@ -76,6 +76,7 @@ ul#nav li {
   float: left;
   margin-right: 10px;
   width: 550px;
+  padding-bottom: 20px;
 }
 .entry h2 {
   float: left;
@@ -96,4 +97,26 @@ ul#nav li {
   width: 60px;
   margin-right: 0px;
   padding-right: 0px;
+}
+.pre-wrap {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 24px;
+  font-family: Terminus, monospace;
+  font-size: 12px;
+  color: white;
+  background-color: #333333;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-left: 5px solid #999999;
 }

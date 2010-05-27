@@ -6,7 +6,7 @@ category: meta
 
 So yet another first post for yet another blog.
 
-After using Posterous since last April I finally got frustrated with issues when logging in to edit posts (it didn't recognise I had logged in), the poor support for inline code snippits ([also mentioned by Jalada](http://jalada.co.uk/2009/11/16/using-jekyll-and-git-blog.html)) and the odd theme problems such as text boxes stretching off the right hand side of the screen.
+After using Posterous since last April I finally got frustrated with issues when logging in to edit posts (it didn't recognise I had logged in), the poor support for inline code snippits ([also mentioned by Jalada](http://jalada.co.uk/2009/11/16/using-jekyll-and-git-to-blog.html)) and the odd theme problems such as text boxes stretching off the right hand side of the screen.
 
 I did some poking around and looking for a replacement. I glanced briefly at tumblr but it was far too Web 2.0 for what I wanted. It also potentially suffered from the same problems posterous had since it was all hosted elsewhere. I decided I wanted a solution hosted on my own webspace.
 

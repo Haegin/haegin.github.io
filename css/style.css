@@ -101,3 +101,9 @@ ul#nav li:first-child:hover {
   -webkit-box-shadow: 5px 5px 5px #888888;
 }
 .entry-date div { font-weight: bolder; }
+.feedlink {
+  background-image: url('../images/silk/icons/feed.png');
+  background-repeat: no-repeat;
+  background-attachment: fixe;
+  background-position: 90% 45%;
+}
