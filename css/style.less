@@ -1,4 +1,4 @@
-/* 
+/*
  * Author: Harry Mills
  * Goal: Defines visual styling for the site.
  */
@@ -12,23 +12,33 @@
 
 @font-face {
     font-family: Diavlo-Black;
-    src: url("./diavlo/Diavlo_BLACK_II_37.otf");
+    src: url("fonts/diavlo/Diavlo_BLACK_II_37.otf");
 }
 
 @font-face {
     font-family: Diavlo-Medium;
-    src: url("./diavlo/Diavlo_MEDIUM_II_37.otf");
+    src: url("fonts/diavlo/Diavlo_MEDIUM_II_37.otf");
 }
 
+/*
 @font-face {
     font-family: Fontin-Sans-Regular;
-    src: url("./fontin/Fontin_Sans_R_45b.otf");
+    src: url("fonts/fontin/Fontin_Sans_R_45b.otf");
 }
 
 @font-face {
     font-family: Titillium;
-    src: url('./titillium/TitilliumText20L.otf');
+    src: url('fonts/titillium/TitilliumText20L.otf');
 }
+
+@font-face {
+	font-family: 'QuicksandBook';
+	src: url('fonts/Quicksand/Quicksand_Book-webfont.eot');
+	src: local('☺'), url('fonts/Quicksand/Quicksand_Book-webfont.woff') format('woff'), url('fonts/Quicksand/Quicksand_Book-webfont.ttf') format('truetype'), url('fonts/Quicksand/Quicksand_Book-webfont.svg#webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
 
 .rounded-corners (@tl: 5px, @tr: 5px, @bl: 5px, @br: 5px) {
     -moz-border-radius-topleft: @tl;
@@ -47,7 +57,7 @@
 }
 
 body {
-    font-family: Titillium, "Gill Sans", Helvetica, Tahoma, sans-serif;
+    font-family: Helvetica, Tahoma, sans-serif;
     color: black;
     background-color: @background_color;
     // Firefox has some really cool gradient stuff but webkit doesn't so we're stuck with boring linear stuff.

@@ -1,21 +1,13 @@
 @font-face {
   font-family: Diavlo-Black;
-  src: url("./diavlo/Diavlo_BLACK_II_37.otf");
+  src: url("fonts/diavlo/Diavlo_BLACK_II_37.otf");
 }
 @font-face {
   font-family: Diavlo-Medium;
-  src: url("./diavlo/Diavlo_MEDIUM_II_37.otf");
-}
-@font-face {
-  font-family: Fontin-Sans-Regular;
-  src: url("./fontin/Fontin_Sans_R_45b.otf");
-}
-@font-face {
-  font-family: Titillium;
-  src: url('./titillium/TitilliumText20L.otf');
+  src: url("fonts/diavlo/Diavlo_MEDIUM_II_37.otf");
 }
 body {
-  font-family: Titillium, "Gill Sans", Helvetica, Tahoma, sans-serif;
+  font-family: Helvetica, Tahoma, sans-serif;
   color: black;
   background-color: #89bad9;
   background-image: -moz-linear-gradient(top, #030140, #89bad9);
