@@ -8,7 +8,7 @@ end
 desc "Create a new draft post"
 task :post do
     title = ENV['TITLE']
-    slug = "#{Date.today}-#{title.downcase.gsub(/[^w]+/, '-')}"
+    slug = "#{Date.today}-#{title.downcase.gsub(/[\s]+/, '-')}"
 
     file = File.join(
         File.dirname(__FILE__),
@@ -17,13 +17,12 @@ task :post do
     )
 
     File.open(file, 'w') do |f|
-        f << <<-EOS.gsub(/^    /, "")
-        ---
-        layout: post
-        title: #{title}
-        published: false
-        categories: 
-        ---
+        f << <<-EOS.gsub(/^ /, "")
+---
+layout: post
+title: #{title}
+category: 
+---
 
         EOS
     end
@@ -54,6 +53,13 @@ desc "Compile all the css files using less css"
 task :lessc do
     FileList['css/*.less'].each do |lessfile|
         sh "lessc #{lessfile} --verbose"
+    end
+end
+
+desc "Minify all the javascript files"
+task :jsmin do
+    FileList['lib/*.js'].each do |jsfile|
+        sh "jsmin < #{jsfile} > #{jsfile}.min"
     end
 end
 
