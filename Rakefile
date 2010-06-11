@@ -31,22 +31,13 @@ category:
 end
 
 desc "Build site using Jekyll"
-task :build => :lessc do
+task :build => [:cssmin, :jsmin] do
   jekyll
 end
 
 desc "Serve on Localhost with port 4000"
-task :default do
-    FileList['css/*.less'].each do |lessfile|
-        #p = Process.fork { system("lessc #{lessfile} --verbose &") }
-        #Process.detach(p)
-        sh "lessc -w #{lessfile} &"
-    end
+task :default => :lessc do
     jekyll("--server --auto")
-end
-
-task :stable do
-  jekyll("--server --auto", "")
 end
 
 desc "Compile all the css files using less css"
@@ -59,7 +50,18 @@ end
 desc "Minify all the javascript files"
 task :jsmin do
     FileList['lib/*.js'].each do |jsfile|
-        sh "jsmin < #{jsfile} > #{jsfile}.min"
+        sh "yuicompressor.jar -o #{jsfile}.min #{jsfile}"
+    end
+end
+
+rule '.js.min' => '.js' do |file|
+    sh "yuicompressor.jar -o #{file.name} #{file.source}"
+end
+
+desc "Minify all the css files"
+task :cssmin => :lessc do
+    FileList['css/*.css'].each do |cssfile|
+        sh "yuicompressor.jar -o #{cssfile}.min #{cssfile}"
     end
 end
 
@@ -71,15 +73,15 @@ namespace :deploy do
   task :dev => :build do
     rsync "dev.appden.com"
   end
-  
+
   desc "Deploy to Live"
   task :live => :build do
     rsync "haeg.in"
   end
-  
+
   desc "Deploy to Dev and Live"
   task :all => [:dev, :live]
-  
+
   def rsync(domain)
 	sh "chmod a+rx -R _site"
     sh "rsync -rtpz --delete _site/ hjmills@haeg.in:~/#{domain}"
