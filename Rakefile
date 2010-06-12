@@ -36,7 +36,7 @@ task :build => [:cssmin, :jsmin] do
 end
 
 desc "Serve on Localhost with port 4000"
-task :default => :lessc do
+task :default => [:cssmin, :jsmin] do
     jekyll("--server --auto")
 end
 
@@ -49,20 +49,25 @@ end
 
 desc "Minify all the javascript files"
 task :jsmin do
-    FileList['lib/*.js'].each do |jsfile|
-        sh "yuicompressor.jar -o #{jsfile}.min #{jsfile}"
-    end
-end
-
-rule '.js.min' => '.js' do |file|
-    sh "yuicompressor.jar -o #{file.name} #{file.source}"
+    sh "rm -f lib/combined.js*"
+    sh "cat lib/*.js > lib/combined.js"
+    sh "yuicompressor.jar -o lib/combined.js.min lib/combined.js"
+#    FileList['lib/*.js'].each do |jsfile|
+#        sh "yuicompressor.jar -o #{jsfile}.min #{jsfile}"
+#    end
 end
 
 desc "Minify all the css files"
 task :cssmin => :lessc do
+    sh "rm -f css/combined.css*"
+    sh "cat css/reset.css > css/combined.css"
     FileList['css/*.css'].each do |cssfile|
-        sh "yuicompressor.jar -o #{cssfile}.min #{cssfile}"
+        if cssfile != "css/combined.css" && cssfile != "css/reset.css"
+            sh "cat #{cssfile} >> css/combined.css"
+        end
+#        sh "yuicompressor.jar -o #{cssfile}.min #{cssfile}"
     end
+    sh "yuicompressor.jar -o css/combined.css.min css/combined.css"
 end
 
 desc "Deploy to Live Site"

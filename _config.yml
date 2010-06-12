@@ -18,22 +18,20 @@ author:
     email:      harry-at-dotin-after-haeg
     twitter:    Haegin
 
-about: >
-    Haegin has yet to write an about section for his site but when he does it may or may
-    not be in the third person.
-
 disqus:
     id:         haegin
 
 nav:
-    - name:     Blog
+    - name:     Home
       url:      /
-
+    - name:     Blog
+      url:      /blog.html
 #    - name:     Gallery
 #      url:      /gallery/
-
+    - name:     Archive
+      url:      /archive.html
     - name:     About
-      url:      /about/
+      url:      /about.html
 
 footer:
     - verb:     Watching
@@ -43,17 +41,20 @@ footer:
       action:   Website for the <a href='http://umoyoorphanproject.org'>Umoyo Orphan Project</a>.
 
     - verb:     Reading
-      action:   Gormenghast by Mervyn Peake.
+      action:   Greyhawk Adventures by Gary Gygax.
 
 copyright:
-    - Design by <a href="http://ipsleung.com">Iris Leung</a>
-    - "&copy; Copyright 2009, AppDen. All Rights Reserved."
+    - Design by <a href="http://haeg.in">Harry Mills</a>
+    - "&copy; Copyright 2010, Haeg.in. All Rights Reserved."
 
 css:
-    - /css/reset.css.min
-    - /css/layout.css.min
-    - /css/style.css.min
+    - /css/combined.css.min
+#    - /css/reset.css.min
+#    - /css/layout.css.min
+#    - /css/style.css.min
 #    - /css/syntax.css.min
 
 js:
-    - /lib/analytics.js.min
+    - /lib/combined.js.min
+    - http://www.google.com/jsapi?key=ABQIAAAA_kruhSKAcNICee45fs0guhRlSyQPnyLBQs_-b4rjto02oZxXzBTXtWdJySHVtWsktpAArWDCN8wqhw
+#    - /lib/analytics.js.min

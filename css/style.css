@@ -88,7 +88,7 @@ ul#nav li:first-child:hover {
   -webkit-border-bottom-right-radius: 0px;
   text-align: center;
   font-weight: bold;
-  font-family: Diavlo;
+  font-family: Diavlo-Medium;
   -moz-box-shadow: 5px 5px 5px 0px #888888;
   -webkit-box-shadow: 5px 5px 5px #888888;
 }
@@ -98,4 +98,14 @@ ul#nav li:first-child:hover {
   background-repeat: no-repeat;
   background-attachment: fixe;
   background-position: 90% 45%;
+}
+.box p span { color: #aaaaaa; }
+.box p span a { color: #aaaaaa; }
+.box ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul {
+  list-style: disc;
+  padding-left: 1.5em;
 }

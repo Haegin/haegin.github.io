@@ -6,6 +6,14 @@
  *
  */
 
+html {
+    height: 100%;
+}
+
+* html {
+    height: 100%;
+}
+
 /* Baseline Grid */
 
 @baseline_size: 24px;
@@ -19,6 +27,7 @@
 body {
     font-size:      @base_text_height;
     line-height:    @baseline_size;
+    height: 100%;
 }
 
 p {
@@ -37,7 +46,7 @@ h2 {
 
 h3 {
 	font-size:      @base_text_height;
-	.baseline;
+    line-height:    @baseline_size;
 }
 
 ul, ol {
@@ -125,6 +134,36 @@ ul#nav li a {
 #content {
     .span(7);
     padding-bottom: 20px;
+}
+
+.box {
+    .span(7);
+    .last;
+    margin-bottom: @baseline_size;
+}
+
+.box p {
+    margin-bottom: 0;
+}
+
+#comments {
+    .span(6);
+}
+
+#pagination {
+    .span(6);
+}
+
+#pagination a.prev {
+    float: left;
+}
+
+#pagination a.next {
+    float: right;
+}
+
+ul#archive {
+    
 }
 
 .entry h2 {

@@ -9,6 +9,7 @@
 @link_color:        #88A61B;
 @visited_color:     #738C16;
 @shadow_color:      #888888;
+@grey:              #aaaaaa;
 
 @font-face {
     font-family: Diavlo-Black;
@@ -150,7 +151,7 @@ ul#nav li:last-child {
     .rounded-corners(0px, 10px, 10px, 0px);
     text-align: center;
     font-weight: bold;
-    font-family: Diavlo;
+    font-family: Diavlo-Medium;
     .box-shadow();
 }
 
@@ -163,4 +164,21 @@ ul#nav li:last-child {
     background-repeat: no-repeat;
     background-attachment: fixe;
     background-position: 90% 45%;
+}
+
+/* Home page boxes */
+.box p span, .box p span a {
+    color: @grey;
+}
+
+.box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Generic Styles */
+
+ul {
+    list-style: disc;
+    padding-left: 1.5em;
 }

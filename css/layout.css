@@ -1,6 +1,9 @@
+html { height: 100%; }
+* html { height: 100%; }
 body {
   font-size: 16px;
   line-height: 24px;
+  height: 100%;
 }
 p { margin-bottom: 24px; }
 h1 {
@@ -15,7 +18,6 @@ h2 {
 }
 h3 {
   font-size: 16px;
-  margin-bottom: 24px;
   line-height: 24px;
 }
 ul, ol { margin-bottom: 24px; }
@@ -78,6 +80,22 @@ ul#nav li a {
   width: 550px;
   padding-bottom: 20px;
 }
+.box {
+  float: left;
+  margin-right: 10px;
+  width: 550px;
+  margin-right: 0px;
+  padding-right: 0px;
+  margin-bottom: 24px;
+}
+.box p { margin-bottom: 0; }
+#comments, #pagination {
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+#pagination a.prev { float: left; }
+#pagination a.next { float: right; }
 .entry h2 {
   float: left;
   margin-right: 10px;
