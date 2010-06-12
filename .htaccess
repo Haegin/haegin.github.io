@@ -2,6 +2,9 @@
 
 AddOutputFilterByType DEFLATE text/html text/plain text/xml text/javascript text/css application/x-javascript application/xhtml+xml application/xml application/rss+xml application/atom+xml application/x-httpd-php application/x-httpd-fastphp application/x-httpd-eruby application/postscript image/svg+xml
 
+# ETag Stuff
+FileETag MTime Size
+
 # Deny access to directory listing and Follow symbolic links
 
 Options -Indexes +SymLinksIfOwnerMatch
