@@ -1,17 +1,20 @@
 /*
- * Author: Harry Mills
- * Goal: Defines visual styling for the site.
+ * Author:  Harry Mills
+ * Goal:    Defines visual styling for the site.
  */
 
-@primary_color:     #3462BF;
+@primary_color:     rgba( 52,  98, 191, 1.0);
 @secondary_color:   #030140;
 @background_color:  #89BAD9;
-//@link_color:        #88A61B;
-@link_color:        rgba(136, 166, 27, 1.0);
+@link_color:        rgba(136, 166,  27, 1.0);
 @visited_color:     #738C16;
-@link_hover_color:  rgba(136, 166, 27, 0.5);
+@link_hover_color:  rgba(136, 166,  27, 0.5);
 @shadow_color:      #888888;
 @grey:              #aaaaaa;
+
+@glow_inner:        rgb(204, 255, 255);
+@glow_mid:          rgb( 85, 85, 85);
+@glow_outer:        rgba(85, 85, 85, 0.0);
 
 @font-face {
     font-family: Diavlo-Black;
@@ -22,26 +25,6 @@
     font-family: Diavlo-Medium;
     src: url("fonts/diavlo/Diavlo_MEDIUM_II_37.otf");
 }
-
-/*
-@font-face {
-    font-family: Fontin-Sans-Regular;
-    src: url("fonts/fontin/Fontin_Sans_R_45b.otf");
-}
-
-@font-face {
-    font-family: Titillium;
-    src: url('fonts/titillium/TitilliumText20L.otf');
-}
-
-@font-face {
-	font-family: 'QuicksandBook';
-	src: url('fonts/Quicksand/Quicksand_Book-webfont.eot');
-	src: local('☺'), url('fonts/Quicksand/Quicksand_Book-webfont.woff') format('woff'), url('fonts/Quicksand/Quicksand_Book-webfont.ttf') format('truetype'), url('fonts/Quicksand/Quicksand_Book-webfont.svg#webfont') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-*/
 
 .rounded-corners (@tl: 5px, @tr: 5px, @bl: 5px, @br: 5px) {
     -moz-border-radius-topleft: @tl;
@@ -110,44 +93,41 @@ ul#nav {
     border-top: 1px solid @visited_color;
     border-bottom: 1px solid @visited_color;
     .highlight-gradient();
-}
 
-ul#nav li {
-    border-top: 1px solid @visited_color;
-}
+    li {
+        border-top: 1px solid @visited_color;
+        a {
+            padding-left: 18px;
+            text-decoration: none;
+            color: @secondary_color;
+            display: block;
+        }
+    }
 
-ul#nav li:first-child {
-    border-top: 0;
-}
+    li:first-child {
+        border-top: 0;
+    }
 
-ul#nav li a {
-    padding-left: 18px;
-    text-decoration: none;
-    color: @secondary_color;
-    display: block;
+    li:hover {
+        background-color: @link_hover_color;
+        a {
+            padding-left: 36px;
+        }
+    }
+
+    li:last-child:hover {
+        .rounded-corners(0px, 0px, 0px, 10px);
+    }
+
+    li:first-child:hover {
+        .rounded-corners(0px, 10px, 0px, 0px);
+    }
 }
 
 ul#nav li:hover {
-    background-color: @link_hover_color;
+//    background-image: -moz-radial-gradient(0% 50%, closest-corner, @glow_inner 1%, @glow_mid 15%, @glow_outer);
+//    background-image: -webkit-gradient(radial, 0% 50%, 0, 0% 50%, 15, from(@glow_inner), to(@glow_outer));
 }
-
-ul#nav li:last-child:hover {
-    .rounded-corners(0px, 0px, 0px, 10px);
-}
-
-ul#nav li:first-child:hover {
-    .rounded-corners(0px, 10px, 0px, 0px);
-}
-
-/*
-ul#nav li:first-child {
-    padding-top: 5px;
-}
-
-ul#nav li:last-child {
-    padding-bottom: 5px;
-}
-*/
 
 /* Date Panel */
 .entry-date {
@@ -162,17 +142,17 @@ ul#nav li:last-child {
     font-family: Diavlo-Medium;
     .box-shadow();
     .highlight-gradient();
-}
 
-.entry-date div {
-    font-weight: bolder;
-}
+    div {
+        font-weight: bolder;
+    }
 
-.feedlink {
-    background-image: url('../images/silk/icons/feed.png');
-    background-repeat: no-repeat;
-    background-attachment: fixe;
-    background-position: 90% 45%;
+    .feedlink {
+        background-image: url('../images/silk/icons/feed.png');
+        background-repeat: no-repeat;
+        background-attachment: fixe;
+        background-position: 90% 45%;
+    }
 }
 
 /* Home page boxes */
