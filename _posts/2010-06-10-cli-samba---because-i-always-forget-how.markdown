@@ -4,7 +4,7 @@ title: CLI Samba - Because I ALWAYS forget how
 category: linux
 ---
 
-I always forget how to copy files easily over the network using Samba so now I've just worked it out again for the umpteenth time I'll record it her.
+I always forget how to copy files easily over the network using Samba so now I've just worked it out again for the umpteenth time I'll record it here.
 
 Firstly you need to know the share you want to access so run the following to get a list of the shares on your network.
 

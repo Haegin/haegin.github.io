@@ -6,8 +6,10 @@
 @primary_color:     #3462BF;
 @secondary_color:   #030140;
 @background_color:  #89BAD9;
-@link_color:        #88A61B;
+//@link_color:        #88A61B;
+@link_color:        rgba(136, 166, 27, 1.0);
 @visited_color:     #738C16;
+@link_hover_color:  rgba(136, 166, 27, 0.5);
 @shadow_color:      #888888;
 @grey:              #aaaaaa;
 
@@ -57,6 +59,11 @@
     -webkit-box-shadow: @left @down @blur @shadow_color;
 }
 
+.highlight-gradient() {
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.0, rgba(255,255,255,0)), color-stop(0.5, rgba(255,255,255,0.2)), color-stop(0.5, rgba(255,255,255,0)), color-stop(1.0, rgba(255,255,255,0)) );
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) );
+}
+
 body {
     font-family: Helvetica, Tahoma, sans-serif;
     color: black;
@@ -102,6 +109,7 @@ ul#nav {
     border-right: 1px solid @visited_color;
     border-top: 1px solid @visited_color;
     border-bottom: 1px solid @visited_color;
+    .highlight-gradient();
 }
 
 ul#nav li {
@@ -120,7 +128,7 @@ ul#nav li a {
 }
 
 ul#nav li:hover {
-    background-color: @visited_color;
+    background-color: @link_hover_color;
 }
 
 ul#nav li:last-child:hover {
@@ -153,6 +161,7 @@ ul#nav li:last-child {
     font-weight: bold;
     font-family: Diavlo-Medium;
     .box-shadow();
+    .highlight-gradient();
 }
 
 .entry-date div {

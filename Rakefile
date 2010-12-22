@@ -1,6 +1,6 @@
 require 'date'
 
-def jekyll(opts = "", path = "/home/harry/.gem/ruby/1.8/bin/")
+def jekyll(opts = "", path = "")
   sh "rm -rf _site"
   sh path + "jekyll " + opts
 end
@@ -43,7 +43,7 @@ end
 desc "Compile all the css files using less css"
 task :lessc do
     FileList['css/*.less'].each do |lessfile|
-        sh "lessc #{lessfile} --verbose"
+        sh "lessc -w #{lessfile} --verbose &"
     end
 end
 
