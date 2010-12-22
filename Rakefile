@@ -43,7 +43,7 @@ end
 desc "Compile all the css files using less css"
 task :lessc do
     FileList['css/*.less'].each do |lessfile|
-        sh "lessc -w #{lessfile} --verbose &"
+        sh "lessc #{lessfile} --verbose"
     end
 end
 
