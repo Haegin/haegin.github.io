@@ -3,8 +3,10 @@ _site
 # Minified css and javascript files
 *.min
 
-# Don't add the combined files
+# Don't add the combined files or the compiled css files
 css/combined.css
+css/style.css
+css/layout.css
 lib/combined.js
 
 # Vim swapfiles
