@@ -146,25 +146,17 @@ ul#nav li a {
     margin-bottom: 0;
 }
 
-.box p:nth-child(even) img {
+.box p span, .box li span {
+    .prepend(1);
+}
+
+.box p:nth-child(even) img, .box li:nth-child(even) img {
     .right;
     clear: both;
     display: none;
 }
 
-.box p:nth-child(odd) img {
-    .left;
-    clear: both;
-    display: none;
-}
-
-.box li:nth-child(even) img {
-    .right;
-    clear: both;
-    display: none;
-}
-
-.box li:nth-child(odd) img {
+.box p:nth-child(odd) img, .box li:nth-child(odd) img {
     .left;
     clear: both;
     display: none;
