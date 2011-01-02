@@ -150,16 +150,61 @@ ul#nav li a {
     .prepend(1);
 }
 
-.box p:nth-child(even) img, .box li:nth-child(even) img {
-    .right;
-    clear: both;
-    display: none;
+.shelf {
+    .span(7);
+    .last;
+    margin-bottom: @baseline_size;
 }
 
-.box p:nth-child(odd) img, .box li:nth-child(odd) img {
-    .left;
-    clear: both;
-    display: none;
+.shelf ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.shelf li {
+    display: inline;
+    list-style-type: none;
+}
+
+#lastfm.shelf {
+    img {
+        width: 126px;
+        height: 126px;
+        vertical-align: bottom;
+    }
+}
+
+#goodreads.shelf li img {
+        width: @column_width;
+        margin-right: @gutter_width;
+}
+
+#goodreads.shelf li:last-child {
+    margin-right: 0px;
+}
+
+.bg-logo(@image: 'images/rss.png') {
+    background: url(@image) no-repeat top right;
+}
+
+#blog {
+    .bg-logo('images/rss.png');
+}
+
+#twitter {
+    .bg-logo('images/twitter.png');
+}
+
+#github {
+    .bg-logo('images/github.png');
+}
+
+#lastfm {
+    .bg-logo('images/music.png');
+}
+
+#goodreads {
+    .bg-logo('images/book.png');
 }
 
 #comments {
@@ -179,7 +224,6 @@ ul#nav li a {
 }
 
 ul#archive {
-    
 }
 
 .entry h2 {
