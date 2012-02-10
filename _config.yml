@@ -28,8 +28,8 @@ nav:
       url:      /blog.html
 #    - name:     Gallery
 #      url:      /gallery/
-    - name:     Archive
-      url:      /archive.html
+#    - name:     Archive
+#      url:      /archive.html
     - name:     About
       url:      /about.html
 

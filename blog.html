@@ -1,29 +1,11 @@
 ---
-layout: default
+layout: page
+title: Haeg.in Archive
 ---
 
-{% for post in paginator.posts %}
-	{% include post.html %}
+<h2>Archive of {{site.posts | size }} posts</h2>
+<ul id="archive">
+{% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span>&raquo; <a href='{{ post.url }}'>{{ post.title }}</a></li>
 {% endfor %}
-
-{% if paginator.total_pages > 1 %}
-	<div id="pagination">
-		{% if paginator.previous_page %}
-			<a class="prev" href="/{%if paginator.previous_page > 1 %}page{{ paginator.previous_page }}/{% endif %}">&laquo; Newer</a>
-		{% endif %}
-
-		{% for page in (1..paginator.total_pages) %}
-			{% if page == paginator.page %}
-				<span class="num">{{ page }}</span>
-			{% else %}
-				<a class="num" href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a>
-			{% endif %}
-		{% endfor %}
-
-		{% if paginator.next_page %}
-			<a class="next" href="/page{{ paginator.next_page }}/">Older &raquo;</a>
-		{% endif %}
-	</div>
-{% endif %}
-
-
+</ul>

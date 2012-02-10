@@ -42,8 +42,11 @@ end
 
 desc "Compile all the css files using less css"
 task :lessc do
+    require 'less'
     FileList['css/*.less'].each do |lessfile|
-        sh "lessc #{lessfile} --verbose"
+        cssFile = File.basename(lessfile, '.less')
+        puts "writing #{lessfile} to #{cssFile}.css"
+        sh "lessc < #{lessfile} > css/#{cssFile}.css"
     end
 end
 
@@ -51,9 +54,9 @@ desc "Minify all the javascript files"
 task :jsmin do
     sh "rm -f lib/combined.js*"
     sh "cat lib/*.js > lib/combined.js"
-    sh "yuicompressor.jar -o lib/combined.js.min lib/combined.js"
+    sh "yuicompressor.sh -o lib/combined.js.min lib/combined.js"
 #    FileList['lib/*.js'].each do |jsfile|
-#        sh "yuicompressor.jar -o #{jsfile}.min #{jsfile}"
+#        sh "yuicompressor.sh -o #{jsfile}.min #{jsfile}"
 #    end
 end
 
@@ -65,9 +68,9 @@ task :cssmin => :lessc do
         if cssfile != "css/combined.css" && cssfile != "css/reset.css"
             sh "cat #{cssfile} >> css/combined.css"
         end
-#        sh "yuicompressor.jar -o #{cssfile}.min #{cssfile}"
+#        sh "yuicompressor.sh -o #{cssfile}.min #{cssfile}"
     end
-    sh "yuicompressor.jar -o css/combined.css.min css/combined.css"
+    sh "yuicompressor.sh -o css/combined.css.min css/combined.css"
 end
 
 desc "Deploy to Live Site"

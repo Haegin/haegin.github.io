@@ -104,6 +104,11 @@ ul#nav li a {
     padding-left: @total_width * @x - @gutter_width;
 }
 
+.indent-align(@indent: 1) {
+    text-indent: -@total_width;
+    padding-left: @total_width;
+}
+
 #container {
     margin: auto;
     width: @total_width * 12 - @gutter_width; // 950 to fit in 1024x768 with browser chrome.
@@ -224,6 +229,13 @@ ul#nav li a {
 }
 
 ul#archive {
+    li {
+        margin-left: 0;
+        span {
+            .span;
+            font-size: x-small;
+        }
+    }
 }
 
 .entry h2 {
