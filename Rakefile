@@ -1,4 +1,5 @@
 require 'date'
+require 'uglifier'
 
 def jekyll(opts = "", path = "")
   sh "rm -rf _site"
@@ -46,7 +47,7 @@ task :lessc do
     FileList['css/*.less'].each do |lessfile|
         cssFile = File.basename(lessfile, '.less')
         puts "writing #{lessfile} to #{cssFile}.css"
-        sh "lessc < #{lessfile} > css/#{cssFile}.css"
+        sh "lessc #{lessfile} > css/#{cssFile}.css"
     end
 end
 
@@ -54,10 +55,12 @@ desc "Minify all the javascript files"
 task :jsmin do
     sh "rm -f lib/combined.js*"
     sh "cat lib/*.js > lib/combined.js"
-    sh "yuicompressor.sh -o lib/combined.js.min lib/combined.js"
 #    FileList['lib/*.js'].each do |jsfile|
 #        sh "yuicompressor.sh -o #{jsfile}.min #{jsfile}"
 #    end
+  File.open('lib/combined.js.min', 'w') do |f|
+    f.write Uglifier.compile(File.read('lib/combined.js'))
+  end
 end
 
 desc "Minify all the css files"
@@ -70,7 +73,7 @@ task :cssmin => :lessc do
         end
 #        sh "yuicompressor.sh -o #{cssfile}.min #{cssfile}"
     end
-    sh "yuicompressor.sh -o css/combined.css.min css/combined.css"
+    #sh "yuicompressor.sh -o css/combined.css.min css/combined.css"
 end
 
 desc "Deploy to Live Site"
