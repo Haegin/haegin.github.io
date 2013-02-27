@@ -1,5 +1,6 @@
 require 'date'
 require 'uglifier'
+require 'yui/compressor'
 
 def jekyll(opts = "", path = "")
   sh "rm -rf _site"
@@ -72,6 +73,9 @@ task :cssmin => :lessc do
             sh "cat #{cssfile} >> css/combined.css"
         end
 #        sh "yuicompressor.sh -o #{cssfile}.min #{cssfile}"
+        File.open('css/combined.css.min', 'w') do |f|
+          f.write YUI::CssCompressor.new.compress(File.read('css/combined.css'))
+        end
     end
     #sh "yuicompressor.sh -o css/combined.css.min css/combined.css"
 end
