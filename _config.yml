@@ -1,60 +1,20 @@
-pygments:       true
-permalink:      /:categories/:title/
-paginate:       13
-markdown:       rdiscount
+# Site settings
+title: Haeg.in
+email: harry@haeg.in
+# description: > # this means to ignore newlines until "baseurl:"
+#   Write an awesome description for your new site here. You can edit this
+#   line in _config.yml. It will appear in your document head meta (for
+#   Google search results) and in your feed.xml site description.
+paginate: 15
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://haeg.in" # the base hostname & protocol for your site
+twitter_username: Haegin
+github_username:  Haegin
 
-exclude:
-    - README.md
-      Rakefile
+# Build settings
+markdown: kramdown
+exclude: old
 
-title:          Haeg.in
-url:            http://haeg.in
-feed:           /atom.xml
-description:    "What I make of it"
-comment:        As this is a comment it is unreadable to the general populance
-
-author:
-    name:       Harry Mills
-    email:      harry-at-dotin-after-haeg
-    twitter:    Haegin
-
-disqus:
-    id:         haegin
-
-nav:
-    - name:     Home
-      url:      /
-    - name:     Blog
-      url:      /blog.html
-#    - name:     Gallery
-#      url:      /gallery/
-#    - name:     Archive
-#      url:      /archive.html
-    - name:     About
-      url:      /about.html
-
-footer:
-    - verb:     Watching
-      action:   "Too much TV. Currently I'm following Chuck, Castle and The Big Bang Theory and catching up on House and How I Met Your Mother."
-
-    - verb:     Developing
-      action:   Website for the <a href='http://umoyoorphanproject.org'>Umoyo Orphan Project</a>.
-
-    - verb:     Reading
-      action:   Greyhawk Adventures by Gary Gygax.
-
-copyright:
-    - Design by <a href="http://haeg.in">Harry Mills</a>
-    - "&copy; Copyright 2010, Haeg.in. All Rights Reserved."
-
-css:
-    - /css/combined.css.min
-#    - /css/reset.css.min
-#    - /css/layout.css.min
-#    - /css/style.css.min
-#    - /css/syntax.css.min
-
-js:
-    - /lib/combined.js.min
-    - http://www.google.com/jsapi?key=ABQIAAAA_kruhSKAcNICee45fs0guhRlSyQPnyLBQs_-b4rjto02oZxXzBTXtWdJySHVtWsktpAArWDCN8wqhw
-#    - /lib/analytics.js.min
+# RSS generator settings
+name: Haeg.in
+author: Harry Mills
