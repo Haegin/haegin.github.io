@@ -1,13 +1,5 @@
 _site
-
-# Minified css and javascript files
-*.min
-
-# Don't add the combined files or the compiled css files
-css/combined.css
-css/style.css
-css/layout.css
-lib/combined.js
+.sass-cache
 
 # Vim swapfiles
 .*.sw*
