@@ -1,5 +1,10 @@
+# Jekyll config
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+
 # Site settings
-title: Haeg.in
+name: Haeg.in
 email: harry@haeg.in
 # description: > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
@@ -13,8 +18,10 @@ github_username:  Haegin
 
 # Build settings
 markdown: kramdown
-exclude: old
+exclude:
+  - old
 
 # RSS generator settings
-name: Haeg.in
-author: Harry Mills
+author:
+  name: Harry Mills
+  email: harry@haeg.in
