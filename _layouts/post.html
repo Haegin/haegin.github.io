@@ -69,7 +69,11 @@ post_class: post-template
                 </figure>
                 <section class="author">
                     <!-- Author Name -->
-                    <h4> {{ site.author }} </h4>
+                    {% if site.author.email %}
+                      <h4><a href="mailto:{{site.author.email}}">{{ site.author.name }}</a></h4>
+                    {% else %}
+                      <h4>{{ site.author }}</h4>
+                    {% endif %}
                     <!-- Author Bio -->
                     <p> 
                         Here goes the author description. You might want to place some links too in here

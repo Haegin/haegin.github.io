@@ -46,7 +46,11 @@ cover: '/assets/images/cover.jpg'
         <footer class="post-meta">
             {% if site.author %}
                 <img class="author-thumb" src="/assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
-                {{ site.author }}
+                {% if site.author.email %}
+                  <a href="mailto:{{site.author.email}}">{{ site.author.name }}</a>
+                {% else %}
+                  {{ site.author }}
+                {% endif %}
             {% endif %}
             {% if post.categories.size > 0 %} 
                 {{ post.categories | array_to_sentence_string | prepend: 'on ' }} 
