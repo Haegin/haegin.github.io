@@ -11,7 +11,7 @@ email: harry@haeg.in
 #   line in _config.yml. It will appear in your document head meta (for
 #   Google search results) and in your feed.xml site description.
 paginate: 15
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://haeg.in" # the base hostname & protocol for your site
 twitter_username: Haegin
 github_username:  Haegin
