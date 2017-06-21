@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Make &#35;10 &amp; &#35;11: Strawberry Oat Bars and Strawberry Jam
-date: 2017-04-30 12:30:00
+title: "Make #10 & #11: Strawberry Oat Bars and Strawberry Jam"
+date: 2017-04-30
 ---
 
 For Christmas Sam bought be Thug Kitchen, a vegan cookbook full of delicious things (no, I'm not vegan, but we are trying to eat more vegetarian meals as the amount of meat we eat as a species isn't sustainable and buying ethically reared meat is super expensive). The people behind Thug Kitchen also have a website with some bonus recipes and there was one on there for Strawberry Oat Bars that I'd been wanting to try for a while. We had a day at home one weekend so decided to do some making.

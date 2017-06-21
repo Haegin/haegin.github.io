@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Make &#35;9: Coconut Macaroons
-date: 2017-04-16 12:30:00
+title: "Make #9: Coconut Macaroons"
+date: 2017-04-16
 ---
 
 This year for valentines day I decided I wanted to make Sam something tasty, so took a look through our various recipe books and settled on coconut macaroons, because they're delicious and I hadn't made them before. It's also easy to add some red food colouring to make some pink ones and get in on the valentines day theme.

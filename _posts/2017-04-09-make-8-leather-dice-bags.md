@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Make &#35;8: Leather Dice Bags
-date: 2017-04-09 12:30:00
+title: "Make #8: Leather Dice Bags"
+date: 2017-04-09
 ---
 
 I've had a nice leather dice bag for years now and it's been great. I picked it up during viking week one year at York and it's served me well for many years, but recently, having been getting more into Fate (which uses different dice and involves tokens as well) I found myself wishing I had another dice bag to use so I could separate things out a bit. This seemed like a great opportunity for a make...

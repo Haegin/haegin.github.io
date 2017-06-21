@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Make &#35;6 &amp; &#35;7: A SCOBY and Kombucha
-date: 2017-04-02 12:30:00
+title: "Make #6 & #7: A SCOBY and Kombucha"
+date: 2017-04-02
 ---
 
 I'm always on the lookout for flavourful cold beverages that aren't full of sugar. I get bored of water after a while and it's nice to have a bit of variety. So far the best I've found is beer, which isn't really a viable option when it's the middle of the working day. Tea is my go-to drink when it's cold, but I never really got into drinking it on a hot day in summer. When I discovered kombucha, a type of fermented sweet tea, I figured I might just be on to something. It has a slightly sweet, slightly sour, nicely tart taste to it and is naturally carbonated (though I'm still experimenting with how long the secondary fermentation needs to be to get the right level of carbonation).
