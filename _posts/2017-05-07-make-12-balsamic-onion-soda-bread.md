@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Make &#35;12 - Balsamic Onion Soda Bread
-date: 2017-04-07 12:30:00
+date: 2017-05-07 12:30:00
 ---
 
 For Easter weekend we went up to the cottage and had a wonderful time relaxing and getting away from work and the city. While we were up there, Sam made some of her delicious French onion soup so I decided to make a soda bread using a recipe from a new cookbook we picked up - Gatherings by Flora Shedden.
