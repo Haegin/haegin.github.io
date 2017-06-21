@@ -14,4 +14,4 @@ After mixing in the rest of the ingredients I portioned off some of the mixture 
 
 I managed to get everything finished before Sam made it home which was good, and made use of our cake stand to lay them out in a totally original and creative pattern for the 14th February...
 
-![An original arrangement...](assets/images/makes/9-1.jpg)
+![An original arrangement...](/assets/images/makes/9-1.jpg)

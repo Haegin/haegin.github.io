@@ -12,6 +12,6 @@ The strawberry oat bars were pretty easy to make. The recipe is online at http:/
 
 After making the bars we were still left with about three quarters of the strawberries from this punnet left. Sam took about half a kilo to make shrub (a drinking vinegar) with, so look out for her make when she gets round to writing it up! Even after this we still had about a kilo of strawberries left (after removing any bad bits) so nipped to the store again to grab some jam sugar and started cooking up some strawberry jam!
 
-![Jars of jam](assets/images/makes/11-1.jpg)
+![Jars of jam](/assets/images/makes/11-1.jpg)
 
 The pot we've got to use for jam making is a bit narrow, so it took far longer to boil off the water and get to the right temperature for the jam, and as it was getting a bit late I turned the heat up a bit high so it scorched slightly, but we eventually had our jam in jars and canned with a water bath. Because I'm slow in writing these posts up we've already worked our way through one jar and it's delicious, particularly on a nice crusty slice of sourdough with a generous helping of butter!
