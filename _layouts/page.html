@@ -4,8 +4,8 @@ post_class: post-template page-template
 ---
 
 <nav class="main-nav clearfix">
-    <a class="back-button icon-arrow-left" href="{{ site.url }}">Home</a>
-    <a class="subscribe-button icon-feed" href="{{ site.url }}rss.xml">Subscribe</a>
+    <a class="back-button icon-arrow-left" href="{{ site.url | relative_url }}">Home</a>
+    <a class="subscribe-button icon-feed" href="{{ site.url | relative_url }}feed.xml">Subscribe</a>
 </nav>
 
 
