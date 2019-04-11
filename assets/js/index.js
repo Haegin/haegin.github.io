@@ -35,7 +35,6 @@
     $document.ready(function () {
 
         var $postContent = $(".post-content");
-        $postContent.fitVids();
 
         function updateImageWidth() {
             var $this = $(this),
