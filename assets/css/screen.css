@@ -481,6 +481,14 @@ margin on the iframe, cause it breaks stuff. */
     overflow: hidden;
 }
 
+.webp .main-header.cover {
+  background-image: url("/assets/images/cover.webp");
+}
+
+.no-webp .main-header.cover, .no-js .main-header.cover {
+  background-image: url("/assets/images/cover.jpg");
+}
+
 .main-header .inner {
     width: 80%;
 }
