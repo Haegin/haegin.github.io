@@ -584,7 +584,7 @@ margin on the iframe, cause it breaks stuff. */
     height: 38px;
     padding: 0 15px 0 10px;
     border: transparent 1px solid;
-    color: #9EABB3;
+    color: #657881;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
@@ -610,7 +610,7 @@ margin on the iframe, cause it breaks stuff. */
     height: 38px;
     padding: 0 20px;
     border: transparent 1px solid;
-    color: #9EABB3;
+    color: #657881;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
@@ -664,7 +664,7 @@ margin on the iframe, cause it breaks stuff. */
 .back-button:hover,
 .subscribe-button:hover {
     border-color: #bfc8cd;
-    color: #9EABB3;
+    color: #657881;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
@@ -776,7 +776,7 @@ body:not(.post-template) .post-title {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #9EABB3;
+    color: #657881;
 }
 
 .author-thumb {
@@ -788,7 +788,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta a {
-    color: #9EABB3;
+    color: #657881;
     text-decoration: none;
 }
 
@@ -934,11 +934,11 @@ body:not(.post-template) .post-title {
     font-size: 1.4rem;
     line-height: 1;
     font-style: italic;
-    color: #9EABB3;
+    color: #657881;
 }
 
 .author-meta a {
-    color: #9EABB3;
+    color: #657881;
 }
 .author-meta a:hover {
     color: #111;
@@ -1227,12 +1227,12 @@ body:not(.post-template) .post-title {
     margin: 4rem auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
-    color: #9EABB3;
+    color: #657881;
     text-align: center;
 }
 
 .pagination a {
-    color: #9EABB3;
+    color: #657881;
     transition: all 0.2s ease;
 }
 
