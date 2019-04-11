@@ -17,7 +17,6 @@ cover: true
         <div class="main-header-content inner">
             <h1 class="page-title">{{ site.name }}</h1>
             <h2 class="page-description">
-                {% if site.description %} {{ site.description }}. {% endif %}
                 {% if page.about %} <a href='{{ site.baseurl }}{{ page.about }}'>About me</a> {% endif %}
             </h2>
         </div>
@@ -45,10 +44,10 @@ cover: true
         </section>
         <footer class="post-meta">
             {% if site.author %}
-                <picture class="author-thumb no-pin">
+                <picture>
                   <source srcset="/assets/images/profile.webp" type="image/webp" />
                   <source srcset="/assets/images/profile.jpg" type="image/jpeg" />
-                  <img src="/assets/images/profile.jpg" alt="Author's profile picture" />
+                  <img class="author-thumb no-pin" src="/assets/images/profile.jpg" alt="Author's profile picture" />
                 </picture>
                 {% if site.author.email %}
                   <a href="mailto:{{site.author.email}}">{{ site.author.name }}</a>
