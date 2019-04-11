@@ -1133,6 +1133,14 @@ body:not(.post-template) .post-title {
     box-shadow: #E7EEF2 0 0 0 1px;
 }
 
+.webp .author-image a {
+  background-image: url("/assets/images/profile.webp");
+}
+
+.no-webp .author-image a, .no-js .author-image a {
+  background-image: url("/assets/images/profile.jpg");
+}
+
 .author-image .img {
     position: relative;
     display: block;

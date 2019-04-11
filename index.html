@@ -45,7 +45,11 @@ cover: true
         </section>
         <footer class="post-meta">
             {% if site.author %}
-                <img class="author-thumb" src="/assets/images/profile.jpg" alt="Author's profile picture" nopin="nopin" />
+                <picture class="author-thumb no-pin">
+                  <source srcset="/assets/images/profile.webp" type="image/webp" />
+                  <source srcset="/assets/images/profile.jpg" type="image/jpeg" />
+                  <img src="/assets/images/profile.jpg" alt="Author's profile picture" />
+                </picture>
                 {% if site.author.email %}
                   <a href="mailto:{{site.author.email}}">{{ site.author.name }}</a>
                 {% else %}
