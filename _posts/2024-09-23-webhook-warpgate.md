@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Webhook Warpgate
-date: 202-09-23 16:00:03
+date: 2024-09-23 16:00:03
 ---
 
 At Relay Platform we worked with a lot of API integrations and many of these
