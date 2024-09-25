@@ -12,7 +12,7 @@ update the webhook URL (as in, we emailed their team and they changed it for
 us) so it wasn't feasible to change it every time a developer needed to test
 features that used webhooks.
 
-Initially, we used Ngrok[ngrok] which provides a public URL that tunnels to your local
+Initially, we used [Ngrok][ngrok] which provides a public URL that tunnels to your local
 client. We had a paid account with an endpoint that we'd register with the
 external systems so we didn't need to change them each time. This worked okay
 initially, though only one developer could use Ngrok at once so it required
@@ -23,7 +23,7 @@ became a bottleneck. We needed a better solution.
 To solve this problem I built a service I called Webhook Warpgate. It was
 deployed on a public facing URL to receive incoming webhook requests and
 forwarded those requests on to one or more registered clients. We used
-Tailscale[tailscale] as our Engineering VPN so by connecting Warpgate to our
+[Tailscale][tailscale] as our Engineering VPN so by connecting Warpgate to our
 Tailnet we could forward the requests to individual developer machines without
 them needing to do any additional setup beyond connecting to the VPN.
 
@@ -32,7 +32,7 @@ vanilla JS frontend. The frontend allowed developers to register new webhook
 endpoints (the address we'd provide to the external service) and to register
 listeners against those webhooks.
 
-To forward the requests to the clients we used Traefik[traefik]. It was
+To forward the requests to the clients we used [Traefik][traefik]. It was
 configured to load its configuration from a route served by the Go backend
 which allowed us to dynamically update the Traefik configuration as developers
 added and removed listeners and endpoints.
@@ -69,4 +69,3 @@ before and I'm sure that I'll face again.
 [ngrok]: https://ngrok.com
 [tailscale]: https://tailscale.com
 [traefik]: https://traefik.io
-
